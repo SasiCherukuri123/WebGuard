@@ -25,9 +25,6 @@ with st.expander("PROJECT DETAILS"):
     st.write('_https://github.com/AwesomeAA-01/WebGuardian-AI_')
 
     st.subheader('Data set')
-    st.write('We used _"phishtank.org"_ & _"tranco-list.eu"_ as data sources.')
-    st.write('Totally 26584 websites ==> **_16060_ legitimate** websites | **_10524_ phishing** websites')
-
     # ----- FOR THE PIE CHART ----- #
     labels = 'phishing', 'legitimate'
     phishing_rate = int(ml.phishing_df.shape[0] / (ml.phishing_df.shape[0] + ml.legitimate_df.shape[0]) * 100)
@@ -56,7 +53,7 @@ with st.expander("PROJECT DETAILS"):
     st.download_button(
         label="Download data as CSV",
         data=csv,
-        file_name='phishing_legitimate_structured_data.csv',
+        file_name='phishing.csv',
         mime='text/csv',
     )
 
